@@ -6,17 +6,20 @@
     </div>
     <div class="o-row">
       {% for block in section.blocks %}
-        <div class="o-col">
-          <div class="o-card">
-            <img src="{{ block.settings.top_image | img_url: 'master' }}" alt="" width="500" height="500">
-            <h3>{{ block.settings.top_title }}</h3>
-            <p>{{ block.settings.top_text_area }}</p>
+        {% if block.type == 'top_block ' %}
+          <div class="o-col">
+            <div class="o-card">
+              <img src="{{ block.settings.top_image | img_url: 'master' }}" alt="" width="500" height="500">
+              <h3>{{ block.settings.top_title }}</h3>
+              <p>{{ block.settings.top_text_area }}</p>
+            </div>
           </div>
-        </div>
+        {% endif %}
       {% endfor %}
     </div>
     <div class="o-row">
-        {% for block in section.blocks %}
+      {% for block in section.blocks %}
+        {% if block.type == 'bottom_block ' %}
           <div class="o-col-1">
             <div class="o-card">
               <img src="{{ block.settings.bottom_image | img_url: 'master' }}" alt="" width="500" height="500">
@@ -24,8 +27,9 @@
               <p>{{ block.settings.bottom_text_area }}</p>
             </div>
           </div>
-        {% endfor %}
-      </div>
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
 </section>
 {% schema %}
@@ -97,45 +101,45 @@
 {% endschema %}
 
 {% style %}
-.o-container {
+  .o-container {
     max-width: 1200px;
     margin: 0 auto;
     padding-right: 15px;
     padding-left: 15px;
-}
+  }
 
-.o-row {
+  .o-row {
     margin-left: -15px;
     margin-right: -15px;
     display: flex;
     flex-wrap: wrap;
-}
+  }
 
-.o-col {
+  .o-col {
     flex: 0 0 33.33%;
     padding-right: 15px;
     padding-left: 15px;
-}
-.o-card img {
+  }
+  .o-card img {
     width: 100%;
     height: 400px;
     object-fit: cover;
-}
-section.cards-sec h2 {
+  }
+  section.cards-sec h2 {
     font-size: calc(var(--font-heading-scale) * 3rem);
     text-align: center;
-}
+  }
 
-section.cards-sec p {
+  section.cards-sec p {
     text-align: center;
-}
+  }
 
-section.cards-sec .o-card h3 {
+  section.cards-sec .o-card h3 {
     font-size: 20px;
     line-height: 20px;
-}
+  }
 
-section.cards-sec .o-card p {
+  section.cards-sec .o-card p {
     text-align: justify;
-}
+  }
 {% endstyle %}
