@@ -243,13 +243,22 @@
             "bottom_title": "Card Title",
             "bottom_text_area": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, iure."
           }
+        },
+        "b20590f7-ac2b-4049-8980-f761627dc006": {
+          "type": "bottom_block",
+          "settings": {
+            "bottom_image": "shopify:\/\/shop_images\/green-and-white-marbled-coloring.jpg",
+            "bottom_title": "Card Title",
+            "bottom_text_area": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, iure."
+          }
         }
       },
       "block_order": [
         "617c71da-d85b-42c7-8f4d-894dc2b5410b",
         "8d0547e2-695b-44b3-b372-2c2958390989",
         "696f0f3e-ddac-4a3f-b109-400024c74774",
-        "7410a291-dc85-4b33-97f9-1c572767ed34"
+        "7410a291-dc85-4b33-97f9-1c572767ed34",
+        "b20590f7-ac2b-4049-8980-f761627dc006"
       ],
       "settings": {
         "title": "Explore",
