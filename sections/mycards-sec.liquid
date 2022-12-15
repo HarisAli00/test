@@ -6,7 +6,7 @@
     </div>
     <div class="o-row">
       {% for block in section.blocks %}
-        {% if block.type == 'top_block ' %}
+        {% if block.type == 'top_block' %}
           <div class="o-col">
             <div class="o-card">
               <img src="{{ block.settings.top_image | img_url: 'master' }}" alt="" width="500" height="500">
@@ -19,7 +19,7 @@
     </div>
     <div class="o-row">
       {% for block in section.blocks %}
-        {% if block.type == 'bottom_block ' %}
+        {% if block.type == 'bottom_block' %}
           <div class="o-col-1">
             <div class="o-card">
               <img src="{{ block.settings.bottom_image | img_url: 'master' }}" alt="" width="500" height="500">
