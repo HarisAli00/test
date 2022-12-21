@@ -6,8 +6,23 @@
           <div class="sw-category-cards__o-col-{{ section.settings.cards_columns }}">
             <div
               class="sw-category-cards__o-card sw-category-cards__o-card-align-hor-{{ block.settings.cards_column_alignment_horizontal }} sw-category-cards__o-card-align-ver-{{ block.settings.cards_column_alignment_vertical }}"
-              style="background-image: url({{ block.settings.background_image | img_url: 'master' }})"
             >
+              <img
+                class="desk-img"
+                src="{{ block.settings.background_image_desktop | img_url: 'master' }}"
+                alt=""
+                width="200"
+                height="200"
+                loading="lazy"
+              >
+              <img
+                class="mob-img"
+                src="{{ block.settings.background_image_mobile | img_url: 'master' }}"
+                alt=""
+                width="200"
+                height="200"
+                loading="lazy"
+              >
               <h3>{{ block.settings.card_title }}</h3>
               <p>{{ block.settings.card_text_area }}</p>
               <a href="{{ block.settings.card_button_url }}">{{ block.settings.card_button_text }}</a>
@@ -78,8 +93,13 @@
           "label": "Vertical Column Alignment"
         },
         {
-          "id": "background_image",
-          "label": "Background Image",
+          "id": "background_image_desktop",
+          "label": "Background Image For Desktop",
+          "type": "image_picker"
+        },
+        {
+          "id": "background_image_mobile",
+          "label": "Background Image For Mobile",
           "type": "image_picker"
         },
         {
@@ -151,13 +171,35 @@
   }
   .sw-category-cards__o-card {
     height: 645px;
-    background-size: cover;
-    background-position: top;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 50px;
     box-sizing: border-box;
+    position: relative;
+  }
+  .sw-category-cards__o-card img.desk-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    height: 645px;
+    object-fit: cover;
+  }
+  .sw-category-cards__o-card img.mob-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    display: none;
+    height: 645px;
+    object-fit: cover;
   }
   .sw-category-cards__o-card-align-hor-start {
     align-items: start;
@@ -212,18 +254,41 @@
     background-color: #323232;
   }
   @media screen and (max-width: 600px) {
-    
-  .sw-category-cards__o-col-2 {
-    flex: 0 0 100%;
-    padding-right: 10px;
-    padding-left: 10px;
-    margin-bottom: 20px;
+    .sw-category-cards__o-col-2 {
+      flex: 0 0 100%;
+      padding-right: 10px;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+    .sw-category-cards__o-col-3 {
+      flex: 0 0 100%;
+      padding-right: 10px;
+      padding-left: 10px;
+      margin: 0 0 20px;
+    }
+    .sw-category-cards__o-card img.desk-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    height: 645px;
+    object-fit: cover;
+    display: none;
   }
-  .sw-category-cards__o-col-3 {
-    flex: 0 0 100%;
-    padding-right: 10px;
-    padding-left: 10px;
-    margin: 0 0 20px;
+  .sw-category-cards__o-card img.mob-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    display: block;
+    height: 645px;
+    object-fit: cover;
   }
-}
+  }
 {% endstyle %}
