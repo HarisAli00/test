@@ -264,6 +264,42 @@
         "title": "Explore",
         "sub_heading": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, iure."
       }
+    },
+    "32f5ec55-ab0b-416f-b41c-42f2688361de": {
+      "type": "category-cards",
+      "blocks": {
+        "5f3a9433-0e98-4186-801d-9951312d7767": {
+          "type": "card_item",
+          "settings": {
+            "cards_column_alignment_horizontal": "end",
+            "cards_column_alignment_vertical": "center",
+            "background_image": "shopify:\/\/shop_images\/01.jpg",
+            "card_title": "Shop Women's",
+            "card_text_area": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, iure.",
+            "card_button_text": "shop",
+            "card_button_url": "shopify:\/\/collections"
+          }
+        },
+        "2d0a989c-f364-4b92-877e-997a67765c82": {
+          "type": "card_item",
+          "settings": {
+            "cards_column_alignment_horizontal": "start",
+            "cards_column_alignment_vertical": "center",
+            "background_image": "shopify:\/\/shop_images\/02.jpg",
+            "card_title": "Shop Men's",
+            "card_text_area": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, iure.",
+            "card_button_text": "shop",
+            "card_button_url": "shopify:\/\/collections"
+          }
+        }
+      },
+      "block_order": [
+        "5f3a9433-0e98-4186-801d-9951312d7767",
+        "2d0a989c-f364-4b92-877e-997a67765c82"
+      ],
+      "settings": {
+        "cards_columns": 2
+      }
     }
   },
   "order": [
@@ -273,6 +309,7 @@
     "collage",
     "video",
     "multicolumn",
-    "80fbf7e5-edea-4747-8a34-a722f8e18b09"
+    "80fbf7e5-edea-4747-8a34-a722f8e18b09",
+    "32f5ec55-ab0b-416f-b41c-42f2688361de"
   ]
 }
