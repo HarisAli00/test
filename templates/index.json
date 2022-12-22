@@ -273,7 +273,6 @@
           "settings": {
             "cards_column_alignment_horizontal": "end",
             "cards_column_alignment_vertical": "center",
-            "background_image_desktop": "shopify:\/\/shop_images\/01.jpg",
             "background_image_mobile": "shopify:\/\/shop_images\/a-bridge-sitting-in-thick-pink-and-purple-fog.jpg",
             "card_title": "Shop Women's",
             "card_text_area": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, iure.",
